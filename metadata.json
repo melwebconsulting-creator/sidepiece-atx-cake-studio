@@ -1,0 +1,6 @@
+{
+  "name": "Sidepiece ATX",
+  "description": "Handmade, artistic, organic custom cakes by Ella Tasso Adams in Austin, Texas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

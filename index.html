@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidepiece ATX — Artistic Custom Cakes by Ella Tasso Adams | Austin, Texas</title>
+    <meta
+      name="description"
+      content="Sidepiece ATX is an independent cake studio in Austin, Texas led by Ella Tasso Adams. One-of-a-kind, handmade custom cakes crafted with organic ingredients, house-made jams, syrups, and dyes."
+    />
+    <meta property="og:title" content="Sidepiece ATX — Custom Cake Artist in Austin, TX" />
+    <meta
+      property="og:description"
+      content="Handmade, playful, one-of-a-kind cakes crafted with organic ingredients by Ella Tasso Adams in Austin, Texas."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.instagram.com/sidepiece_atx/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sidepiece ATX — Custom Cake Artist" />
+    <meta
+      name="twitter:description"
+      content="Playful, organic, handmade custom cakes in Austin, Texas by Ella Tasso Adams."
+    />
+
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body id="top">
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- A. Announcement Strip -->
+    <aside class="announcement-strip" aria-label="Brand Announcement">
+      <div class="announcement-content">
+        <svg class="strip-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M12 2L14.4 8.6L21.5 9.2L16.1 13.9L17.7 20.8L12 17.2L6.3 20.8L7.9 13.9L2.5 9.2L9.6 8.6L12 2Z" />
+        </svg>
+        <span>GOOD CAKE. REAL INGREDIENTS. A LITTLE BIT OF MAGIC.</span>
+        <svg class="strip-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M12 2L14.4 8.6L21.5 9.2L16.1 13.9L17.7 20.8L12 17.2L6.3 20.8L7.9 13.9L2.5 9.2L9.6 8.6L12 2Z" />
+        </svg>
+      </div>
+    </aside>
+
+    <!-- B. Navigation -->
+    <header class="site-header" id="site-header">
+      <div class="header-container">
+        <!-- Brand Wordmark -->
+        <a href="#top" class="brand-wordmark" aria-label="Sidepiece ATX Homepage">
+          <span class="brand-name">SIDEPIECE ATX</span>
+          <svg class="cherry-accent-icon" viewBox="0 0 32 32" width="22" height="22" fill="none" aria-hidden="true">
+            <path d="M9 16C12 9 17 6 22 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 17C21 11 20 8 22 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 5C25 3 28 4 29 6C27 8 24 7 22 5Z" fill="#C9D6A3"/>
+            <circle cx="8.5" cy="20.5" r="5.5" fill="#8F1838"/>
+            <circle cx="20.5" cy="21.5" r="5.5" fill="#8F1838"/>
+            <circle cx="6.5" cy="18.5" r="1.5" fill="#F4A7B9"/>
+            <circle cx="18.5" cy="19.5" r="1.5" fill="#F4A7B9"/>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <ul class="nav-links-list">
+            <li><a href="#top" class="nav-link active">Home</a></li>
+            <li><a href="#cakes" class="nav-link">The Cakes</a></li>
+            <li><a href="#philosophy" class="nav-link">Our Philosophy</a></li>
+            <li><a href="#process" class="nav-link">Custom Process</a></li>
+            <li><a href="#artist" class="nav-link">The Artist</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header CTA & Mobile Toggle -->
+        <div class="header-actions">
+          <a
+            href="https://www.instagram.com/sidepiece_atx/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary nav-cta"
+            aria-label="Let's Make a Cake on Instagram (opens in new tab)"
+          >
+            LET'S MAKE A CAKE
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button
+            type="button"
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+            aria-label="Open mobile navigation menu"
+          >
+            <span class="hamburger-bar top-bar"></span>
+            <span class="hamburger-bar middle-bar"></span>
+            <span class="hamburger-bar bottom-bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+        <nav class="mobile-nav" aria-label="Mobile Navigation">
+          <ul class="mobile-links-list">
+            <li><a href="#top" class="mobile-link">Home</a></li>
+            <li><a href="#cakes" class="mobile-link">The Cakes</a></li>
+            <li><a href="#philosophy" class="mobile-link">Our Philosophy</a></li>
+            <li><a href="#process" class="mobile-link">Custom Process</a></li>
+            <li><a href="#artist" class="mobile-link">The Artist</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+          </ul>
+          <div class="mobile-cta-wrap">
+            <a
+              href="https://www.instagram.com/sidepiece_atx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-block"
+            >
+              LET'S MAKE A CAKE (IG DM)
+            </a>
+            <p class="mobile-drawer-note">Custom cake inquiries handled directly through Instagram DMs.</p>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Page Content -->
+    <main id="main-content">
+      <!-- C. Hero Section -->
+      <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="hero-container">
+          <!-- Left Column: Copy & Actions -->
+          <div class="hero-copy-column">
+            <div class="hero-kicker-wrap">
+              <span class="editorial-kicker">Austin, Texas · Custom Cake Practice</span>
+              <span class="decorative-twinkle" aria-hidden="true">✦</span>
+            </div>
+
+            <h1 id="hero-heading" class="hero-headline">
+              CAKE, WITH A LITTLE MORE <span class="headline-italic">CHARACTER.</span>
+            </h1>
+
+            <p class="hero-subheading">
+              Organic ingredients. Handmade details. One-of-a-kind cakes made with love in Austin, Texas.
+            </p>
+
+            <div class="hero-cta-group">
+              <a
+                href="https://www.instagram.com/sidepiece_atx/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary hero-btn"
+                aria-label="Let's dream up a cake on Instagram (opens in new tab)"
+              >
+                LET'S DREAM UP A CAKE
+              </a>
+              <a href="#artist" class="btn btn-outline hero-btn">
+                MEET THE ARTIST
+              </a>
+            </div>
+
+            <!-- Handcrafted Value Markers -->
+            <div class="hero-badges-row" aria-label="Core studio values">
+              <div class="hero-tape-badge">
+                <span class="badge-icon">✓</span>
+                <span class="badge-text">MADE BY HAND</span>
+              </div>
+              <div class="hero-tape-badge">
+                <span class="badge-icon">✦</span>
+                <span class="badge-text">ALWAYS ONE OF A KIND</span>
+              </div>
+              <div class="hero-tape-badge">
+                <span class="badge-icon">✿</span>
+                <span class="badge-text">REAL INGREDIENTS ONLY</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Collage & Art Presentation -->
+          <div class="hero-media-column">
+            <div class="hero-collage-wrapper">
+              <!-- Background Art Plate Card -->
+              <div class="collage-card collage-card-main">
+                <img
+                  src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=1200&q=80"
+                  alt="Artistic custom layered cake decorated with delicate vanilla buttercream swirls and fresh berries"
+                  class="hero-main-img"
+                  loading="eager"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="collage-caption-tag">
+                  <span class="tag-dot"></span>
+                  <span>VISUAL INSPIRATION</span>
+                </div>
+              </div>
+
+              <!-- Overlapping Secondary Polaroid Badge -->
+              <div class="collage-card collage-card-secondary" aria-hidden="true">
+                <img
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+                  alt="Vintage piped chocolate cake with cherries"
+                  class="hero-sub-img"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="polaroid-label">Slow-simmered berry preserves</div>
+              </div>
+
+              <!-- Hand-Drawn Stamp Sticker -->
+              <div class="artisan-stamp" aria-hidden="true">
+                <svg class="stamp-spin-text" viewBox="0 0 100 100" width="100" height="100">
+                  <path
+                    id="stamp-circle-path"
+                    d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
+                    fill="none"
+                  />
+                  <text font-size="10.5" fill="#38241F" font-weight="700" letter-spacing="2">
+                    <textPath href="#stamp-circle-path">
+                      • AUSTIN TX • HAND CRAFTED • CAKE ART •
+                    </textPath>
+                  </text>
+                </svg>
+                <div class="stamp-center">✦</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- D. Featured Cake Gallery -->
+      <section class="gallery-section" id="cakes" aria-labelledby="gallery-heading">
+        <div class="container">
+          <div class="section-header text-center">
+            <div class="section-kicker">
+              <span>PORTFOLIO CONCEPTS</span>
+              <span class="kicker-sep">/</span>
+              <span>VISUAL INSPIRATION</span>
+            </div>
+            <h2 id="gallery-heading" class="section-title">
+              NO TWO CAKES ARE <span class="headline-italic">THE SAME.</span>
+            </h2>
+            <p class="section-subtitle">
+              Every cake is a tiny edible artwork. These are visual inspirations for your next creation.
+            </p>
+          </div>
+
+          <!-- Asymmetrical Editorial Grid -->
+          <div class="gallery-grid" id="cake-gallery-grid">
+            <!-- Concept 1: Romantic Vintage Piping with Cherries -->
+            <article class="gallery-card card-tall" data-cake="1">
+              <div class="gallery-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80"
+                  alt="Romantic vintage piping cake with glossy maraschino cherries and ivory ruffles"
+                  class="gallery-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="gallery-overlay">
+                  <span class="view-concept-btn">Explore Concept</span>
+                </div>
+                <div class="card-pill-tag">VISUAL INSPIRATION</div>
+              </div>
+              <div class="gallery-card-body">
+                <div class="cake-number">01</div>
+                <h3 class="cake-title">Romantic Vintage Piping with Cherries</h3>
+                <p class="cake-desc">
+                  Intricate lambeth-style scalloped borders, delicate sugar swags, and hand-selected glossy crimson cherries.
+                </p>
+                <div class="cake-meta">
+                  <span class="meta-item">Vanilla bean sponge</span>
+                  <span class="meta-sep">·</span>
+                  <span class="meta-item">Slow cherry jam</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Concept 2: Playful Pink and Red Celebration Cake -->
+            <article class="gallery-card card-wide" data-cake="2">
+              <div class="gallery-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=1000&q=80"
+                  alt="Playful pink and red celebration cake with bold swirls and organic berry dyes"
+                  class="gallery-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="gallery-overlay">
+                  <span class="view-concept-btn">Explore Concept</span>
+                </div>
+                <div class="card-pill-tag">VISUAL INSPIRATION</div>
+              </div>
+              <div class="gallery-card-body">
+                <div class="cake-number">02</div>
+                <h3 class="cake-title">Playful Pink & Red Celebration Cake</h3>
+                <p class="cake-desc">
+                  High-energy contrast, organic raspberry-infused pink buttercream, and bold cherry-red accents made for unforgettable milestones.
+                </p>
+                <div class="cake-meta">
+                  <span class="meta-item">Strawberry reduction</span>
+                  <span class="meta-sep">·</span>
+                  <span class="meta-item">Raspberry glaze</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Concept 3: Fresh Botanical Cake with Natural Colors -->
+            <article class="gallery-card card-square" data-cake="3">
+              <div class="gallery-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1000&q=80"
+                  alt="Fresh botanical cake pressed with edible blooms and soft sage botanical frosting"
+                  class="gallery-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="gallery-overlay">
+                  <span class="view-concept-btn">Explore Concept</span>
+                </div>
+                <div class="card-pill-tag">VISUAL INSPIRATION</div>
+              </div>
+              <div class="gallery-card-body">
+                <div class="cake-number">03</div>
+                <h3 class="cake-title">Fresh Botanical & Pressed Blossom Cake</h3>
+                <p class="cake-desc">
+                  Delicate organic edible pansies, fresh aromatic thyme stems, and earth-toned matcha & pistachio natural dyes.
+                </p>
+                <div class="cake-meta">
+                  <span class="meta-item">Elderflower syrup</span>
+                  <span class="meta-sep">·</span>
+                  <span class="meta-item">Edible pressed blooms</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Concept 4: Whimsical Sculptural Cake -->
+            <article class="gallery-card card-tall" data-cake="4">
+              <div class="gallery-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=1000&q=80"
+                  alt="Whimsical sculptural cake with palette knife textures and organic wavy frosting folds"
+                  class="gallery-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="gallery-overlay">
+                  <span class="view-concept-btn">Explore Concept</span>
+                </div>
+                <div class="card-pill-tag">VISUAL INSPIRATION</div>
+              </div>
+              <div class="gallery-card-body">
+                <div class="cake-number">04</div>
+                <h3 class="cake-title">Whimsical Sculptural Cake</h3>
+                <p class="cake-desc">
+                  Undulating waves created with hand palette knives, soft organic curves, and tactile architectural layers.
+                </p>
+                <div class="cake-meta">
+                  <span class="meta-item">Brown butter crumb</span>
+                  <span class="meta-sep">·</span>
+                  <span class="meta-item">Vanilla cloud</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Concept 5: Elegant Buttercream Cake with Delicate Details -->
+            <article class="gallery-card card-square" data-cake="5">
+              <div class="gallery-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1000&q=80"
+                  alt="Elegant buttercream cake with delicate pearl piping and warm vanilla tones"
+                  class="gallery-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="gallery-overlay">
+                  <span class="view-concept-btn">Explore Concept</span>
+                </div>
+                <div class="card-pill-tag">VISUAL INSPIRATION</div>
+              </div>
+              <div class="gallery-card-body">
+                <div class="cake-number">05</div>
+                <h3 class="cake-title">Elegant Buttercream with Delicate Details</h3>
+                <p class="cake-desc">
+                  Quiet luxury in cake form. Satin-finish buttercream, micro-pearl piping, and deckled organic edge profiles.
+                </p>
+                <div class="cake-meta">
+                  <span class="meta-item">Tahitian vanilla</span>
+                  <span class="meta-sep">·</span>
+                  <span class="meta-item">Whipped mascarpone</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Concept 6: Colorful, Unconventional Artistic Cake -->
+            <article class="gallery-card card-wide" data-cake="6">
+              <div class="gallery-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1000&q=80"
+                  alt="Colorful unconventional cake with painterly abstract buttercream swatches and fresh fruit"
+                  class="gallery-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="gallery-overlay">
+                  <span class="view-concept-btn">Explore Concept</span>
+                </div>
+                <div class="card-pill-tag">VISUAL INSPIRATION</div>
+              </div>
+              <div class="gallery-card-body">
+                <div class="cake-number">06</div>
+                <h3 class="cake-title">Colorful, Unconventional Artistic Cake</h3>
+                <p class="cake-desc">
+                  Expressive abstract swatches inspired by contemporary canvas paintings, candied citrus peels, and joyful colors.
+                </p>
+                <div class="cake-meta">
+                  <span class="meta-item">Citrus marmalade</span>
+                  <span class="meta-sep">·</span>
+                  <span class="meta-item">Spiced syrup soak</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Bottom Gallery Note -->
+          <div class="gallery-footer-note">
+            <p>
+              *Images presented as visual design inspiration. Every Sidepiece ATX cake is custom-designed and uniquely handcrafted from scratch.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox Modal for Gallery Detail -->
+      <div
+        class="modal-backdrop"
+        id="cake-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-cake-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+            ✕
+          </button>
+          <div class="modal-content-grid">
+            <div class="modal-image-col">
+              <img id="modal-img" src="" alt="" class="modal-img" />
+              <span class="modal-tag">VISUAL INSPIRATION</span>
+            </div>
+            <div class="modal-info-col">
+              <span class="modal-step" id="modal-cake-number">CONCEPT 01</span>
+              <h3 id="modal-cake-title" class="modal-title">Cake Concept</h3>
+              <p id="modal-cake-desc" class="modal-desc"></p>
+              <div class="modal-palette-block">
+                <h4 class="modal-palette-heading">Artistic Palette & Texture:</h4>
+                <div class="modal-palette-swatches" id="modal-swatches"></div>
+              </div>
+              <div class="modal-notes-box">
+                <p><strong>Custom Craft Note:</strong> Handcrafted in Austin, TX with real house-made fillings and customized to your celebration mood.</p>
+              </div>
+              <a
+                href="https://www.instagram.com/sidepiece_atx/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary btn-block"
+              >
+                DISCUSS THIS INSPIRATION ON IG
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E. Brand Philosophy -->
+      <section class="philosophy-section" id="philosophy" aria-labelledby="philosophy-heading">
+        <div class="container">
+          <div class="philosophy-badge-wrap">
+            <span class="philosophy-pill">OUR PHILOSOPHY</span>
+          </div>
+
+          <div class="philosophy-intro">
+            <h2 id="philosophy-heading" class="philosophy-headline">
+              GOOD THINGS TAKE THE <span class="headline-italic">REAL STUFF.</span>
+            </h2>
+            <p class="philosophy-lead">
+              We believe the best cakes begin with honest ingredients and a little imagination. From homemade jams and syrups to colors made in-house, every detail is part of the art.
+            </p>
+          </div>
+
+          <!-- Three Core Principles -->
+          <div class="principles-grid">
+            <div class="principle-card">
+              <div class="principle-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="36" height="36" fill="none">
+                  <circle cx="20" cy="20" r="18" fill="#FFF7ED" stroke="#38241F" stroke-width="1.5" />
+                  <path d="M20 10V30M13 17L20 10L27 17" stroke="#8F1838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 25C15 28 25 28 28 25" stroke="#38241F" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="principle-title">REAL INGREDIENTS</h3>
+              <p class="principle-desc">
+                Never cutting corners. We select organic staples, real cream, pure butter, fresh seasonal fruits, and whole spices that taste as vibrant as they look.
+              </p>
+            </div>
+
+            <div class="principle-card">
+              <div class="principle-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="36" height="36" fill="none">
+                  <circle cx="20" cy="20" r="18" fill="#FFF7ED" stroke="#38241F" stroke-width="1.5" />
+                  <path d="M14 24C16 16 24 16 26 24" stroke="#8F1838" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="20" cy="14" r="3" fill="#F4D66D"/>
+                  <path d="M13 28H27" stroke="#38241F" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="principle-title">MADE FROM SCRATCH</h3>
+              <p class="principle-desc">
+                From slow-simmered berry preserves and infused syrups to natural dyes coaxed from flowers and berries, our components are crafted by hand in our studio.
+              </p>
+            </div>
+
+            <div class="principle-card">
+              <div class="principle-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="36" height="36" fill="none">
+                  <circle cx="20" cy="20" r="18" fill="#FFF7ED" stroke="#38241F" stroke-width="1.5" />
+                  <path d="M12 20L18 14L28 24L22 30L12 20Z" fill="#F4A7B9" stroke="#38241F" stroke-width="1.5"/>
+                  <circle cx="26" cy="13" r="2.5" fill="#8F1838"/>
+                </svg>
+              </div>
+              <h3 class="principle-title">NEVER COOKIE-CUTTER</h3>
+              <p class="principle-desc">
+                No factory duplicates, no rigid catalog presets. Every cake is treated as an individual piece of sculpture crafted specifically for the person celebrating.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- F. Custom Cake Process -->
+      <section class="process-section" id="process" aria-labelledby="process-heading">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="editorial-kicker">HOW IT WORKS</span>
+            <h2 id="process-heading" class="section-title">
+              YOUR IDEA. OUR LITTLE <span class="headline-italic">OBSESSION.</span>
+            </h2>
+            <p class="section-subtitle">
+              Creating a one-of-a-kind cake is a collaborative artistic journey. Here is how we turn your celebration into something sweet.
+            </p>
+          </div>
+
+          <div class="process-steps-grid">
+            <!-- Step 1 -->
+            <div class="step-card">
+              <div class="step-number-badge">01</div>
+              <h3 class="step-title">DREAM IT</h3>
+              <p class="step-desc">
+                Tell us about your celebration, ideas, and inspiration. Whether it's a moodboard, a color obsession, or a favorite vintage era, share what makes your heart sing.
+              </p>
+              <div class="step-accent-line"></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+              <div class="step-number-badge">02</div>
+              <h3 class="step-title">DESIGN IT</h3>
+              <p class="step-desc">
+                Discuss the colors, mood, and details you'd love. We collaborate on flavor pairings, homemade jam fillings, and custom artistic piping suited to your venue.
+              </p>
+              <div class="step-accent-line"></div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+              <div class="step-number-badge">03</div>
+              <h3 class="step-title">MAKE IT SWEET</h3>
+              <p class="step-desc">
+                Reach out to discuss your custom cake. Inquiries and custom pricing are handled directly through direct messages to ensure personal attention for every event.
+              </p>
+              <div class="step-accent-line"></div>
+            </div>
+          </div>
+
+          <!-- Process CTA Block -->
+          <div class="process-cta-box">
+            <div class="process-cta-text">
+              <h3>Ready to start the conversation?</h3>
+              <p>Inquiries, availability, and custom quotes are handled personally via Instagram DMs.</p>
+            </div>
+            <a
+              href="https://www.instagram.com/sidepiece_atx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              aria-label="Start your cake idea on Instagram (opens in new tab)"
+            >
+              START YOUR CAKE IDEA
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- G. Artist Introduction -->
+      <section class="artist-section" id="artist" aria-labelledby="artist-heading">
+        <div class="container">
+          <div class="artist-grid">
+            <!-- Left Portrait Visual -->
+            <div class="artist-image-col">
+              <div class="artist-frame-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80"
+                  alt="Ella Tasso Adams artisan cake baker working with precision in the sunlit cake studio"
+                  class="artist-portrait-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="artist-tag-badge">
+                  <span>ELLA TASSO ADAMS · AUSTIN TX</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Editorial Content -->
+            <div class="artist-content-col">
+              <span class="editorial-kicker">MEET THE ARTIST</span>
+              <h2 id="artist-heading" class="artist-headline">
+                THE HAND BEHIND THE <span class="headline-italic">BUTTERCREAM.</span>
+              </h2>
+
+              <div class="artist-bio-text">
+                <p>
+                  Sidepiece ATX is a creative cake practice led by Ella Tasso Adams, where real ingredients meet a playful artistic spirit. The goal is simple: make cakes that feel personal, expressive, and impossible to copy exactly.
+                </p>
+                <p>
+                  Rooted in Austin's independent creative community, each bake is guided by the belief that custom food should be as thoughtful as art. No rigid molds, no artificial shortcuts—just genuine craft, vibrant house-made dyes, and a passion for edible celebration.
+                </p>
+              </div>
+
+              <div class="artist-feature-link-wrap">
+                <a
+                  href="https://canvasrebel.com/meet-ella-tasso-adams/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline"
+                  aria-label="Read the artist feature on CanvasRebel (opens in new tab)"
+                >
+                  READ THE ARTIST FEATURE ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- H. Instagram Call-to-Action -->
+      <section class="instagram-section" id="contact" aria-labelledby="instagram-heading">
+        <div class="container">
+          <div class="instagram-card">
+            <div class="instagram-content">
+              <div class="ig-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </div>
+              <h2 id="instagram-heading" class="instagram-headline">
+                GOT A CAKE IDEA? WE'RE <span class="headline-italic">LISTENING.</span>
+              </h2>
+              <p class="instagram-copy">
+                Send us your inspiration, your color palette, your wildest cake idea. Let's see what we can dream up.
+              </p>
+              <div class="instagram-action">
+                <a
+                  href="https://www.instagram.com/sidepiece_atx/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary btn-ig"
+                  aria-label="DM Sidepiece ATX on Instagram (opens in new tab)"
+                >
+                  DM @SIDEPIECE_ATX
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual Moodboard Preview -->
+            <div class="instagram-visual-preview" aria-hidden="true">
+              <div class="preview-tile">
+                <span class="preview-swatch swatch-cherry"></span>
+                <span class="preview-label">Deep Cherry</span>
+              </div>
+              <div class="preview-tile">
+                <span class="preview-swatch swatch-pink"></span>
+                <span class="preview-label">Strawberry Milk</span>
+              </div>
+              <div class="preview-tile">
+                <span class="preview-swatch swatch-butter"></span>
+                <span class="preview-label">Whipped Butter</span>
+              </div>
+              <div class="preview-tile">
+                <span class="preview-swatch swatch-pistachio"></span>
+                <span class="preview-label">Pistachio Leaf</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- I. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="footer-brand-col">
+            <span class="footer-wordmark">SIDEPIECE ATX</span>
+            <p class="footer-tagline">Handmade with love and real ingredients.</p>
+            <p class="footer-city">Austin, Texas</p>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#cakes">The Cakes</a></li>
+              <li><a href="#philosophy">Our Philosophy</a></li>
+              <li><a href="#process">Custom Process</a></li>
+              <li><a href="#artist">The Artist</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading">Connect & Story</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.instagram.com/sidepiece_atx/" target="_blank" rel="noopener noreferrer">
+                  Instagram (@sidepiece_atx) ↗
+                </a>
+              </li>
+              <li>
+                <a href="https://canvasrebel.com/meet-ella-tasso-adams/" target="_blank" rel="noopener noreferrer">
+                  Artist Feature on CanvasRebel ↗
+                </a>
+              </li>
+              <li><a href="#top" class="back-to-top-btn" id="back-to-top">Back to top ↑</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="footer-legal-note">
+            <p>
+              Custom cake details, schedule availability, and individual pricing are discussed directly with the artist via Instagram DMs.
+            </p>
+            <p class="independent-demo-disclaimer">
+              Independent concept and design showcase. Created with respect for the artisanal work of Ella Tasso Adams.
+            </p>
+          </div>
+          <div class="footer-copyright">
+            © <span id="copyright-year">2026</span> Sidepiece ATX. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="./script.js"></script>
+  </body>
+</html>

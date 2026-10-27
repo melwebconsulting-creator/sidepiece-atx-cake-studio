@@ -1,0 +1,1593 @@
+/* ==========================================================================
+   SIDEPIECE ATX — Brand Stylesheet
+   Artistic, editorial, bespoke cake studio design
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Custom Properties & Design Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Palette */
+  --color-cream: #FFF7ED;
+  --color-pink: #F4A7B9;
+  --color-cherry: #8F1838;
+  --color-chocolate: #38241F;
+  --color-pistachio: #C9D6A3;
+  --color-butter: #F4D66D;
+  --color-white: #FFFFFF;
+
+  /* Tints & Overlays */
+  --color-cream-card: #FFFFFF;
+  --color-cream-alt: #FCF4E8;
+  --color-chocolate-muted: #644B44;
+  --color-cherry-dark: #6D112A;
+  --color-cherry-glow: rgba(143, 24, 56, 0.16);
+  --color-border-subtle: rgba(56, 36, 31, 0.12);
+  --color-border-focus: #8F1838;
+
+  /* Typography */
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  /* Layout Containers */
+  --container-max: 1200px;
+  --container-pad: 1.5rem;
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+  --radius-organic: 32px 8px 32px 8px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(56, 36, 31, 0.06);
+  --shadow-md: 0 8px 24px rgba(56, 36, 31, 0.08);
+  --shadow-lg: 0 16px 36px rgba(56, 36, 31, 0.12);
+  --shadow-card: 0 4px 16px rgba(56, 36, 31, 0.07);
+
+  /* Transitions */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s var(--ease-spring);
+  --transition-base: 0.28s var(--ease-spring);
+  --transition-slow: 0.45s var(--ease-spring);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Base Elements
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-chocolate);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle paper texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.025;
+  background-image: radial-gradient(var(--color-chocolate) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 3px solid var(--color-border-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-cherry);
+  color: var(--color-cream);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  z-index: 100000;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+/* --------------------------------------------------------------------------
+   3. Typography & Badges
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-chocolate);
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.headline-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-cherry);
+}
+
+.editorial-kicker {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--color-cherry);
+  display: inline-block;
+}
+
+.section-header {
+  margin-bottom: var(--space-3xl);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-chocolate-muted);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.kicker-sep {
+  color: var(--color-cherry);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  color: var(--color-chocolate-muted);
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   4. Buttons & Interactive Controls
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-cherry);
+  color: var(--color-cream);
+  box-shadow: 0 4px 14px var(--color-cherry-glow);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-cherry-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(143, 24, 56, 0.28);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-chocolate);
+  border: 1.5px solid var(--color-chocolate);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-chocolate);
+  color: var(--color-cream);
+  transform: translateY(-2px);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   5. A. Announcement Strip
+   -------------------------------------------------------------------------- */
+.announcement-strip {
+  background-color: var(--color-cherry);
+  color: var(--color-cream);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.strip-icon {
+  color: var(--color-butter);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. B. Navigation & Header
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 247, 237, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: all var(--transition-base);
+}
+
+.header-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0.875rem var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Zone 1: Brand Wordmark */
+.brand-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-cherry);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cherry-accent-icon {
+  transition: transform var(--transition-base);
+}
+
+.brand-wordmark:hover .cherry-accent-icon {
+  transform: rotate(12deg) scale(1.1);
+}
+
+/* Zone 2: Desktop Navigation */
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .desktop-nav {
+    display: block;
+  }
+}
+
+.nav-links-list {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-chocolate);
+  position: relative;
+  padding: 0.25rem 0;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-cherry);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Zone 3: Actions & Mobile Hamburger */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-cta {
+  display: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 720px) {
+  .nav-cta {
+    display: inline-flex;
+  }
+}
+
+/* Mobile Hamburger Button */
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 44px;
+  height: 44px;
+  padding: 10px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (min-width: 900px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-chocolate);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+}
+
+/* Mobile menu toggle open state */
+.mobile-menu-toggle.is-open .top-bar {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-toggle.is-open .middle-bar {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.mobile-menu-toggle.is-open .bottom-bar {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Navigation Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-cream);
+  padding: 5.5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-base);
+  z-index: 999;
+  border-bottom: 3px solid var(--color-cherry);
+}
+
+.mobile-nav-drawer.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mobile-link {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-chocolate);
+  display: block;
+  transition: color var(--transition-fast);
+}
+
+.mobile-link:hover {
+  color: var(--color-cherry);
+}
+
+.mobile-cta-wrap {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.mobile-drawer-note {
+  font-size: 0.8125rem;
+  color: var(--color-chocolate-muted);
+  text-align: center;
+  margin-top: 0.875rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. C. Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding: var(--space-3xl) 0 var(--space-4xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-4xl);
+  }
+}
+
+.hero-kicker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.decorative-twinkle {
+  color: var(--color-cherry);
+  font-size: 1rem;
+}
+
+.hero-headline {
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-lg);
+  line-height: 1.08;
+}
+
+.hero-subheading {
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  color: var(--color-chocolate-muted);
+  max-width: 32rem;
+  margin-bottom: var(--space-2xl);
+  line-height: 1.55;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: var(--space-2xl);
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+}
+
+/* Tape Badges */
+.hero-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-border-subtle);
+}
+
+.hero-tape-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--color-butter);
+  color: var(--color-chocolate);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  box-shadow: 1px 2px 4px rgba(56, 36, 31, 0.08);
+  transform: rotate(-1.5deg);
+  transition: transform var(--transition-fast);
+}
+
+.hero-tape-badge:nth-child(2) {
+  background-color: var(--color-pink);
+  transform: rotate(1deg);
+}
+
+.hero-tape-badge:nth-child(3) {
+  background-color: var(--color-pistachio);
+  transform: rotate(-0.5deg);
+}
+
+.hero-tape-badge:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+.badge-icon {
+  font-size: 0.875rem;
+  color: var(--color-cherry);
+}
+
+/* Hero Collage */
+.hero-collage-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.collage-card {
+  background: var(--color-white);
+  padding: 0.75rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.collage-card-main {
+  border-radius: var(--radius-organic);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: calc(var(--radius-xl) - 4px) 4px calc(var(--radius-xl) - 4px) 4px;
+}
+
+.collage-caption-tag {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background-color: rgba(255, 247, 237, 0.95);
+  backdrop-filter: blur(4px);
+  color: var(--color-chocolate);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-cherry);
+}
+
+.collage-card-secondary {
+  position: absolute;
+  bottom: -2rem;
+  right: -1.5rem;
+  width: 180px;
+  border-radius: var(--radius-md);
+  transform: rotate(4deg);
+  box-shadow: var(--shadow-lg);
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .collage-card-secondary {
+    display: block;
+  }
+}
+
+.hero-sub-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+}
+
+.polaroid-label {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--color-chocolate-muted);
+}
+
+/* Artisan Spinning Stamp */
+.artisan-stamp {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  width: 90px;
+  height: 90px;
+  background-color: var(--color-butter);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stamp-spin-text {
+  animation: spinSlow 20s linear infinite;
+}
+
+.stamp-center {
+  position: absolute;
+  font-size: 1.25rem;
+  color: var(--color-cherry);
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --------------------------------------------------------------------------
+   8. D. Featured Cake Gallery
+   -------------------------------------------------------------------------- */
+.gallery-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-cream);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+
+  .gallery-card.card-tall {
+    grid-column: span 5;
+  }
+
+  .gallery-card.card-wide {
+    grid-column: span 7;
+  }
+
+  .gallery-card.card-square {
+    grid-column: span 6;
+  }
+}
+
+.gallery-card {
+  background: var(--color-cream-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-cream-alt);
+}
+
+.card-tall .gallery-img-wrap {
+  height: 380px;
+}
+
+.card-wide .gallery-img-wrap {
+  height: 320px;
+}
+
+.card-square .gallery-img-wrap {
+  height: 340px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+.card-pill-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 247, 237, 0.92);
+  backdrop-filter: blur(4px);
+  color: var(--color-chocolate);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(56, 36, 31, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.gallery-card:hover .gallery-overlay,
+.gallery-card:focus-within .gallery-overlay {
+  opacity: 1;
+}
+
+.view-concept-btn {
+  background-color: var(--color-cream);
+  color: var(--color-cherry);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-pill);
+  transform: translateY(8px);
+  transition: transform var(--transition-base);
+}
+
+.gallery-card:hover .view-concept-btn {
+  transform: translateY(0);
+}
+
+.gallery-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cake-number {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-cherry);
+  margin-bottom: 0.25rem;
+}
+
+.cake-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.cake-desc {
+  font-size: 0.9375rem;
+  color: var(--color-chocolate-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.cake-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-chocolate);
+  font-weight: 600;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.meta-sep {
+  color: var(--color-pink);
+}
+
+.gallery-footer-note {
+  margin-top: var(--space-3xl);
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-chocolate-muted);
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   9. Lightbox Modal
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 18, 14, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-dialog {
+  background: var(--color-cream);
+  max-width: 840px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.95);
+  transition: transform var(--transition-base);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-backdrop.is-open .modal-dialog {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  color: var(--color-chocolate);
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  border: 1px solid var(--color-border-subtle);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background: var(--color-cherry);
+  color: var(--color-cream);
+}
+
+.modal-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .modal-content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.modal-image-col {
+  position: relative;
+  background: var(--color-cream-alt);
+  min-height: 280px;
+}
+
+.modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-cream);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+.modal-info-col {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-step {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-cherry);
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-desc {
+  font-size: 0.9375rem;
+  color: var(--color-chocolate-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal-palette-block {
+  margin-bottom: 1.5rem;
+}
+
+.modal-palette-heading {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  color: var(--color-chocolate);
+}
+
+.modal-palette-swatches {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.swatch-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-white);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.modal-notes-box {
+  background: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. E. Brand Philosophy
+   -------------------------------------------------------------------------- */
+.philosophy-section {
+  background-color: var(--color-pistachio);
+  color: var(--color-chocolate);
+  padding: var(--space-4xl) 0;
+  position: relative;
+}
+
+.philosophy-badge-wrap {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.philosophy-pill {
+  display: inline-block;
+  background-color: var(--color-cream);
+  color: var(--color-chocolate);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.375rem 1rem;
+  border-radius: var(--radius-pill);
+}
+
+.philosophy-intro {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto var(--space-3xl);
+}
+
+.philosophy-headline {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.philosophy-lead {
+  font-size: clamp(1.0625rem, 1.35vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--color-chocolate);
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .principles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.principle-card {
+  background-color: var(--color-cream);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(56, 36, 31, 0.08);
+  transition: transform var(--transition-base);
+}
+
+.principle-card:hover {
+  transform: translateY(-4px);
+}
+
+.principle-icon-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.principle-title {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+  color: var(--color-cherry);
+}
+
+.principle-desc {
+  font-size: 0.9375rem;
+  color: var(--color-chocolate-muted);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   11. F. Custom Cake Process
+   -------------------------------------------------------------------------- */
+.process-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-cream-alt);
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: var(--space-3xl);
+}
+
+@media (min-width: 768px) {
+  .process-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-number-badge {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-cherry);
+  background-color: var(--color-butter);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.step-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.step-desc {
+  font-size: 0.9375rem;
+  color: var(--color-chocolate-muted);
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.step-accent-line {
+  margin-top: 1.5rem;
+  height: 3px;
+  width: 36px;
+  background-color: var(--color-pink);
+  border-radius: 2px;
+}
+
+.process-cta-box {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  border: 2px dashed var(--color-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .process-cta-box {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.process-cta-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.process-cta-text p {
+  font-size: 0.9375rem;
+  color: var(--color-chocolate-muted);
+}
+
+/* --------------------------------------------------------------------------
+   12. G. Artist Introduction
+   -------------------------------------------------------------------------- */
+.artist-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-cream);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .artist-grid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: var(--space-4xl);
+  }
+}
+
+.artist-frame-wrap {
+  position: relative;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--radius-organic);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-subtle);
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.artist-portrait-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: calc(var(--radius-xl) - 8px) 4px calc(var(--radius-xl) - 8px) 4px;
+}
+
+.artist-tag-badge {
+  margin-top: 0.875rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-chocolate-muted);
+}
+
+.artist-headline {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  letter-spacing: -0.02em;
+  margin: var(--space-sm) 0 var(--space-lg);
+}
+
+.artist-bio-text p {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-chocolate);
+  margin-bottom: 1.25rem;
+}
+
+.artist-feature-link-wrap {
+  margin-top: var(--space-xl);
+}
+
+/* --------------------------------------------------------------------------
+   13. H. Instagram Call-to-Action
+   -------------------------------------------------------------------------- */
+.instagram-section {
+  padding: var(--space-4xl) 0;
+}
+
+.instagram-card {
+  background-color: var(--color-cherry);
+  color: var(--color-cream);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  box-shadow: 0 16px 40px rgba(143, 24, 56, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .instagram-card {
+    grid-template-columns: 1.3fr 0.7fr;
+    padding: 4.5rem 4rem;
+    align-items: center;
+  }
+}
+
+.ig-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 247, 237, 0.15);
+  color: var(--color-cream);
+  margin-bottom: 1.25rem;
+}
+
+.instagram-headline {
+  color: var(--color-cream);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.instagram-headline .headline-italic {
+  color: var(--color-pink);
+}
+
+.instagram-copy {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  color: rgba(255, 247, 237, 0.9);
+  max-width: 34rem;
+  margin-bottom: 2rem;
+  line-height: 1.55;
+}
+
+.btn-ig {
+  background-color: var(--color-cream);
+  color: var(--color-cherry);
+  padding: 1.125rem 2.25rem;
+  font-size: 0.9375rem;
+}
+
+.btn-ig:hover {
+  background-color: var(--color-white);
+  color: var(--color-cherry-dark);
+}
+
+/* Moodboard Preview */
+.instagram-visual-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.preview-tile {
+  background: rgba(255, 247, 237, 0.12);
+  border: 1px solid rgba(255, 247, 237, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.preview-swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--color-cream);
+}
+
+.swatch-cherry { background-color: var(--color-cherry-dark); }
+.swatch-pink { background-color: var(--color-pink); }
+.swatch-butter { background-color: var(--color-butter); }
+.swatch-pistachio { background-color: var(--color-pistachio); }
+
+.preview-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-cream);
+  letter-spacing: 0.04em;
+}
+
+/* --------------------------------------------------------------------------
+   14. I. Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-chocolate);
+  color: var(--color-cream);
+  padding: var(--space-4xl) 0 var(--space-2xl);
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: var(--space-3xl);
+  border-bottom: 1px solid rgba(255, 247, 237, 0.12);
+}
+
+@media (min-width: 640px) {
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .footer-top-grid {
+    grid-template-columns: 2fr 1fr 1.25fr;
+  }
+}
+
+.footer-wordmark {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-cream);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 0.9375rem;
+  color: rgba(255, 247, 237, 0.8);
+  margin-bottom: 0.25rem;
+}
+
+.footer-city {
+  font-size: 0.8125rem;
+  color: var(--color-butter);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-heading {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-pink);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+  color: rgba(255, 247, 237, 0.8);
+}
+
+.footer-links a:hover {
+  color: var(--color-cream);
+}
+
+.back-to-top-btn {
+  color: var(--color-butter) !important;
+  font-weight: 600;
+}
+
+.footer-bottom-bar {
+  padding-top: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 247, 237, 0.6);
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer-legal-note {
+  max-width: 42rem;
+  line-height: 1.5;
+}
+
+.independent-demo-disclaimer {
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: rgba(255, 247, 237, 0.45);
+}
+
+.footer-copyright {
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   15. Scroll Reveal & Accessibility Animations
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--ease-spring), transform 0.6s var(--ease-spring);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .stamp-spin-text {
+    animation: none !important;
+  }
+}
